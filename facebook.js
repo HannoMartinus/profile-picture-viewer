@@ -79,6 +79,29 @@ function get_username_id(username) {
       })
   })
 }
+function get_username_id(username) {
+  return new Promise((resolve, reject) => {
+    fetch(`https://www.facebook.com/${username}`)
+      .then(response => response.text()) // Get the HTML content
+      .then(html => {
+        // Regular expression to find the "userID" value
+        const regex = /"userID":"(\d+)"/;
+        const match = html.match(regex);
+
+        if (match && match[1]) {
+          console.log("Extracted userID:", match[1]); // Debug log
+          resolve(match[1]); // Return the userID
+        } else {
+          console.error("Could not extract userID"); // Debug log
+          reject(new Error("Could not extract userID"));
+        }
+      })
+      .catch(err => {
+        console.error("Error fetching profile page:", err); // Debug log
+        reject(new Error("Error fetching profile page"));
+      });
+  });
+}
 
 /**
  * Opens Full Size Profile Picture using fb access token
@@ -87,7 +110,7 @@ function get_username_id(username) {
 function open_full_hd_photo(id) {
   get_fb_access_token() // Get user access token
     .then(access_token => {
-      window.open(`https://graph.facebook.com/${id}/picture?width=5000&access_token=${access_token}`)
+      window.open(`https://graph.facebook.com/${id}/picture?redirect=1&height=5000&type=normal&width=5000&access_token=${access_token}`)
     })
 }
 
