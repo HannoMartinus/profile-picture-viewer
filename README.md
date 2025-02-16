@@ -5,14 +5,9 @@
 
 Bypass the FB / IG / TikT0k profile picture guard and see user's profile picture in __full size__ 📷
 
-### Download (from Google Web Store)
-
-[Click here to download](https://chrome.google.com/webstore/detail/profile-picture-viewer/olhdholihhioakdjhfhligfehfjjfeoc?hl=en&authuser=0)
-
-
 ### Installation Instructions (from GitHub):
 
-0. Download this repository by Clicking [Here](https://github.com/Ademking/profile-picture-viewer/archive/refs/heads/master.zip)
+0. Download this repository by Clicking [Here](https://github.com/HannoMartinus/profile-picture-viewer/archive/refs/heads/master.zip)
 1. Unzip the file and you should have a folder named `profile-picture-viewer-master`.
 2. Navigate to **chrome://extensions/** 
 3. Ensure the checkbox labeled **Developer mode** is enabled. 
@@ -31,7 +26,8 @@ I highly recommend to not use these kinds of tricks to find and view private pro
 Please take in consideration that social media websites are updating regularly and thus could make the code throw errors. If any error encountered please open an new issue request
 
 ### Changelog
-
+__1.0.9__
+- Fixed FB issue.
 __1.0.8__
 - Fixed IG issue. Everything is working again
 
