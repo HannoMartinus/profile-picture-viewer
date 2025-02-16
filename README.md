@@ -28,6 +28,7 @@ Please take in consideration that social media websites are updating regularly a
 ### Changelog
 __1.0.9__
 - Fixed FB issue.
+
 __1.0.8__
 - Fixed IG issue. Everything is working again
 
